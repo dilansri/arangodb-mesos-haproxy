@@ -1,0 +1,20 @@
+global
+    user root
+    group root
+    # Stats required for this module to work
+    # https://github.com/observing/haproxy#haproxycfg
+    stats socket /tmp/haproxy.sock level admin
+
+defaults
+    log     global
+    mode    http
+    option httplog
+    timeout connect 5000
+    timeout client  50000
+    timeout server  50000
+    frontend arangodb
+        bind :### PORT ###
+        default_backend arangodb
+    
+    backend arangodb
+      ### COORDINATORS ###
