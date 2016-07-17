@@ -13,7 +13,7 @@ defaults
     timeout client  50000
     timeout server  50000
     frontend arangodb
-        bind :### PORT ###
+        bind :80
         default_backend arangodb
     
     backend arangodb

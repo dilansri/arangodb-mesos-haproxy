@@ -74,7 +74,6 @@ function reconfigure() {
   })
   .then(coordinatorSection => {
     let newConfig = template.replace(/### COORDINATORS ###/, coordinatorSection);
-    newConfig = newConfig.replace(/### PORT ###/, process.env.PORT0);
     if (newConfig != currentConfig) {
       fs.writeFileSync('/etc/haproxy/haproxy.cfg', newConfig);
       currentConfig = newConfig;
