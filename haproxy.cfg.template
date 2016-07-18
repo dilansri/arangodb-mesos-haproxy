@@ -17,4 +17,6 @@ defaults
         default_backend arangodb
     
     backend arangodb
+      stick-table type ip size 10k expire 30m
+      stick on src
       ### COORDINATORS ###
