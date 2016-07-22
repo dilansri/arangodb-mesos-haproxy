@@ -4,7 +4,7 @@ Deploying this on a mesos cluster providing service discovery via mesos-dns (for
 
 ## Installation
 
-Inspect the marathon.json file and adjust it if needed. Specifically the argument to the cmd needs to be adjusted so it matched the framework name of your arangodb3 instance. If you simply installed arangodb3 using the default settings or you don't know what it is you can leave it as it is.
+Inspect the marathon.json file and adjust it if needed. Specifically the argument to the cmd needs to be adjusted so it matches the framework name of your arangodb3 instance. If you simply installed arangodb3 using the default settings or you don't know what it is you can leave it as it is.
 
 Finally deploy it:
 
