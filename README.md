@@ -12,4 +12,4 @@ Finally deploy it:
     
 After deployment you will have a load balancer balacing all arangodb requests across all coordinators.
 
-Point your apps using arangodb from the _INSIDE_ to `tcp://arangodb-proxy.mesos:8529` and you are done :)
+Point your apps using arangodb from the _INSIDE_ to `tcp://arangodb-proxy.marathon.mesos:8529` and you are done :)
