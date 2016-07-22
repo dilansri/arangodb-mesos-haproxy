@@ -8,8 +8,8 @@ Inspect the marathon.json file and adjust it if needed. Specifically the argumen
 
 Finally deploy it:
 
-    dcos marathon app install marathon.json
+    dcos marathon app add marathon.json
     
 After deployment you will have a load balancer balacing all arangodb requests across all coordinators.
 
-Point your arango client to `tcp://arangodb-proxy.mesos:8529` and you are done :)
+Point your apps using arangodb from the _INSIDE_ to `tcp://arangodb-proxy.mesos:8529` and you are done :)
