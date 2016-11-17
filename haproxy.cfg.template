@@ -7,15 +7,14 @@ global
 
 defaults
     log     global
-    mode    http
-    option httplog
+    mode    tcp
     timeout connect 5000
     timeout client  50000
     timeout server  50000
     frontend arangodb
         bind :80
         default_backend arangodb
-    
+
     backend arangodb
       stick-table type ip size 10k expire 30m
       stick on src
